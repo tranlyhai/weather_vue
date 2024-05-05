@@ -48,7 +48,7 @@
     <div class="w-full max-w-screen-md py-12">
       <div class="mx-8 text-white">
         <h2 class="mb-4">Hourly Weather</h2>
-        <div class="flex gap-10 overflow-x-scroll">
+        <div class="flex gap-10 pb-4 overflow-x-scroll hourly-custom-scroll">
           <div
             v-for="hourData in weatherData.hourly"
             :key="hourData.dt"
@@ -156,3 +156,21 @@ const removeCity = () => {
   })
 };
 </script>
+
+<style scoped>
+.hourly-custom-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+.hourly-custom-scroll::-webkit-scrollbar-track {
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+.hourly-custom-scroll::-webkit-scrollbar-thumb {
+  background: #004E71;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.hourly-custom-scroll::-webkit-scrollbar-thumb:hover {
+  opacity: 0.7;
+}
+</style>

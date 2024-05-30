@@ -31,3 +31,6 @@ coverage
 
 # environment
 .env
+.gitignore
+.editorconfig
+/.vscode/

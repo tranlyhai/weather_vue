@@ -75,7 +75,6 @@ const getSearchResults = () => {
 };
 
 const previewCity = (searchResult) => {
-  console.log(searchResult);
   const [city, state] = searchResult.properties.full_address.split(",");
   router.push({
     name: "cityView",

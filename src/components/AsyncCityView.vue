@@ -121,7 +121,7 @@ import { useRoute, useRouter } from "vue-router";
 
 const route = useRoute();
 const router = useRouter();
-const openweatherAPIKey = "3d2f3e8cc0b925fb49365b9f202527a0";
+const openweatherAPIKey = import.meta.env.VITE_OW_API_KEY;
 const getWeatherData = async () => {
   try {
     const weatherData = await axios.get(
